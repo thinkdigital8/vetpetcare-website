@@ -1,0 +1,133 @@
+-<?php
+/**
+ * VetPet Care - Contact / Bulk Inquiry form handler
+ * Emails form submissions to the address in $TO below.
+ *
+ * Upload this file to the SAME folder as index.html.
+ * The form in index.html posts here via fetch() and expects a JSON reply.
+ *
+ * ----------------------------------------------------------------------
+ * NOTE ON DELIVERABILITY:
+ * PHP's built-in mail() works on most shared hosting (cPanel, Hostinger,
+ * GoDaddy, etc.) with no setup. If mails land in spam or don't arrive,
+ * use SMTP with PHPMailer instead - a ready-to-use SMTP version is shown
+ * in the commented block at the bottom of this file.
+ * ----------------------------------------------------------------------
+ */
+
+// ---- Settings -------------------------------------------------------
+$TO       = 'blackfordventure@gmail.com';          // where inquiries are sent
+$FROM     = 'care@vetpetcare.in';                  // must be an address on YOUR domain (SPF)
+$FROM_NAME = 'VetPet Care Website';
+$SUBJECT_PREFIX = 'New Website Inquiry';
+// ---------------------------------------------------------------------
+
+header('Content-Type: application/json; charset=utf-8');
+
+// Only allow POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['ok' => false, 'error' => 'Method not allowed.']);
+    exit;
+}
+
+// Simple spam honeypot: bots fill hidden "website" field. Humans leave it blank.
+if (!empty($_POST['website'])) {
+    // Pretend success so the bot moves on.
+    echo json_encode(['ok' => true]);
+    exit;
+}
+
+// Helper: clean a single-line value and strip characters used for header injection
+function clean($v) {
+    $v = isset($v) ? trim($v) : '';
+    $v = str_replace(["\r", "\n", "%0a", "%0d"], ' ', $v);
+    return $v;
+}
+
+// Collect fields
+$name    = clean($_POST['name']    ?? '');
+$phone   = clean($_POST['phone']   ?? '');
+$email   = clean($_POST['email']   ?? '');
+$country = clean($_POST['country'] ?? '');
+$type    = clean($_POST['type']    ?? 'General Enquiry');
+$message = trim($_POST['message']  ?? '');           // multi-line allowed in body
+$message = str_replace(["\r\n", "\r"], "\n", $message);
+
+// Validate required
+$errors = [];
+if ($name === '')    $errors[] = 'name';
+if ($phone === '')   $errors[] = 'phone';
+if ($message === '') $errors[] = 'message';
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'email';
+
+if ($errors) {
+    http_response_code(422);
+    echo json_encode(['ok' => false, 'error' => 'Please check the highlighted fields.', 'fields' => $errors]);
+    exit;
+}
+
+// Build the email body
+$body  = "New inquiry from the VetPet Care website\n";
+$body .= "----------------------------------------\n\n";
+$body .= "Name:          $name\n";
+$body .= "Phone:         $phone\n";
+$body .= "Email:         " . ($email !== '' ? $email : '-') . "\n";
+$body .= "Country:       " . ($country !== '' ? $country : '-') . "\n";
+$body .= "Inquiry Type:  $type\n\n";
+$body .= "Message:\n$message\n\n";
+$body .= "----------------------------------------\n";
+$body .= "Sent: " . date('d M Y, H:i') . "\n";
+if (!empty($_SERVER['REMOTE_ADDR'])) $body .= "IP:   " . $_SERVER['REMOTE_ADDR'] . "\n";
+
+$subject = $SUBJECT_PREFIX . ' - ' . $type . ' (' . $name . ')';
+
+// Headers (From must be your own domain; Reply-To lets you reply straight to the visitor)
+$headers  = 'From: ' . $FROM_NAME . ' <' . $FROM . ">\r\n";
+if ($email !== '') {
+    $headers .= 'Reply-To: ' . $name . ' <' . $email . ">\r\n";
+} else {
+    $headers .= 'Reply-To: ' . $FROM . "\r\n";
+}
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+
+// 5th arg sets the envelope sender - improves deliverability on many hosts
+$sent = @mail($TO, $subject, $body, $headers, '-f' . $FROM);
+
+if ($sent) {
+    echo json_encode(['ok' => true]);
+} else {
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'error' => 'Sorry, the message could not be sent. Please WhatsApp or call us instead.']);
+}
+
+/* =====================================================================
+ * OPTIONAL: reliable Gmail delivery via SMTP (PHPMailer)
+ * ---------------------------------------------------------------------
+ * If mail() above is unreliable on your host, use this instead:
+ *
+ * 1) Install PHPMailer:  composer require phpmailer/phpmailer
+ *    (or download it and require the src/*.php files manually)
+ * 2) Create a Gmail "App Password" (Google Account > Security >
+ *    2-Step Verification > App passwords). Do NOT use your login password.
+ * 3) Replace the mail() call above with:
+ *
+ * use PHPMailer\PHPMailer\PHPMailer;
+ * require 'vendor/autoload.php';
+ * $m = new PHPMailer(true);
+ * $m->isSMTP();
+ * $m->Host       = 'smtp.gmail.com';
+ * $m->SMTPAuth   = true;
+ * $m->Username   = 'blackfordventure@gmail.com';
+ * $m->Password   = 'YOUR_16_CHAR_APP_PASSWORD';
+ * $m->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+ * $m->Port       = 465;
+ * $m->setFrom('blackfordventure@gmail.com', 'VetPet Care Website');
+ * $m->addAddress('blackfordventure@gmail.com');
+ * if ($email !== '') $m->addReplyTo($email, $name);
+ * $m->Subject = $subject;
+ * $m->Body    = $body;
+ * $m->send();
+ * ===================================================================== */
