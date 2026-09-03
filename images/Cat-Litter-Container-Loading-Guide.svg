@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Cat litter container loading guide — 20ft and 40ft export container capacity</title>
+<desc id="desc">An open shipping container stacked with cat litter export bags, with approximate bag count and tonnage figures and a dotted global shipping route, representing container loading planning for cat litter exporters and importers.</desc>
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="820" y2="440" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FFF8EE"/>
+    <stop offset="1" stop-color="#FFF1DC"/>
+  </linearGradient>
+  <linearGradient id="glow2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C3AED" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="containerBody" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F7941D"/>
+    <stop offset="1" stop-color="#C96A00"/>
+  </linearGradient>
+  <linearGradient id="containerInside" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3C1361"/>
+    <stop offset="1" stop-color="#2A0D4E"/>
+  </linearGradient>
+  <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#3C1361" flood-opacity=".18"/>
+  </filter>
+</defs>
+
+<rect width="820" height="440" fill="url(#bg2)"/>
+<circle cx="70" cy="60" r="200" fill="url(#glow2)"/>
+<circle cx="760" cy="400" r="220" fill="url(#glow2)"/>
+
+<!-- shipping route -->
+<g stroke="#C9BCA5" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round" fill="none">
+  <path d="M60 70 C 260 30, 520 40, 720 90"/>
+</g>
+<circle cx="60" cy="70" r="6" fill="#F7941D"/>
+<circle cx="720" cy="90" r="6" fill="#7C3AED"/>
+<text x="60" y="50" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#8a7d70">India</text>
+<text x="672" y="70" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="700" fill="#8a7d70">Your Port</text>
+
+<!-- shipping container -->
+<g filter="url(#soft2)">
+  <rect x="120" y="150" width="420" height="220" rx="10" fill="url(#containerBody)"/>
+  <rect x="120" y="150" width="420" height="220" rx="10" fill="none" stroke="#A85300" stroke-width="3"/>
+  <!-- corrugation lines -->
+  <g stroke="#B4590A" stroke-width="2" opacity=".55">
+    <line x1="140" y1="150" x2="140" y2="370"/>
+    <line x1="165" y1="150" x2="165" y2="370"/>
+    <line x1="190" y1="150" x2="190" y2="370"/>
+    <line x1="215" y1="150" x2="215" y2="370"/>
+    <line x1="240" y1="150" x2="240" y2="370"/>
+  </g>
+  <!-- open door frame revealing bags -->
+  <rect x="270" y="168" width="255" height="186" rx="6" fill="url(#containerInside)"/>
+  <!-- bags grid -->
+  <g>
+    <!-- row 1 -->
+    <rect x="284" y="184" width="50" height="60" rx="5" fill="#EDE7DD"/>
+    <rect x="340" y="184" width="50" height="60" rx="5" fill="#F7F3EA"/>
+    <rect x="396" y="184" width="50" height="60" rx="5" fill="#EDE7DD"/>
+    <rect x="452" y="184" width="55" height="60" rx="5" fill="#F7F3EA"/>
+    <!-- row 2 -->
+    <rect x="284" y="250" width="50" height="60" rx="5" fill="#F7F3EA"/>
+    <rect x="340" y="250" width="50" height="60" rx="5" fill="#EDE7DD"/>
+    <rect x="396" y="250" width="50" height="60" rx="5" fill="#F7F3EA"/>
+    <rect x="452" y="250" width="55" height="60" rx="5" fill="#EDE7DD"/>
+    <!-- row 3 partial -->
+    <rect x="284" y="316" width="50" height="26" rx="5" fill="#EDE7DD"/>
+    <rect x="340" y="316" width="50" height="26" rx="5" fill="#F7F3EA"/>
+    <rect x="396" y="316" width="50" height="26" rx="5" fill="#EDE7DD"/>
+    <rect x="452" y="316" width="55" height="26" rx="5" fill="#F7F3EA"/>
+  </g>
+  <!-- door panels -->
+  <rect x="120" y="150" width="20" height="220" fill="#C96A00"/>
+  <rect x="520" y="150" width="20" height="220" fill="#C96A00"/>
+</g>
+
+<!-- 20FT tag -->
+<g transform="translate(130,118)">
+  <rect x="0" y="0" width="86" height="30" rx="15" fill="#3C1361"/>
+  <text x="43" y="20" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="800" fill="#FFD9A0">20FT / 40FT</text>
+</g>
+
+<!-- stat card -->
+<g filter="url(#soft2)">
+  <rect x="580" y="150" width="180" height="150" rx="18" fill="#ffffff"/>
+  <text x="670" y="192" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="800" fill="#3C1361">~1,100</text>
+  <text x="670" y="212" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11.5" fill="#6b5d55">25kg bags*</text>
+  <line x1="605" y1="228" x2="735" y2="228" stroke="#ecdfce" stroke-width="1.5"/>
+  <text x="670" y="256" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="24" font-weight="800" fill="#F7941D">~28T</text>
+  <text x="670" y="276" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11.5" fill="#6b5d55">per 20ft container*</text>
+</g>
+
+<text x="120" y="410" font-family="Poppins, Arial, sans-serif" font-size="12.5" fill="#8a7d70">*Approximate — exact count depends on pack size, palletizing and destination weight rules</text>
+</svg>
