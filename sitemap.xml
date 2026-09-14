@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Blog index -->
+  <url>
+    <loc>https://vetpetcare.in/blog.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Country landing pages -->
   <url>
     <loc>https://vetpetcare.in/cat-litter-bangladesh.html</loc>
