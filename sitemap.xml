@@ -29,6 +29,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Quality documentation -->
+  <url>
+    <loc>https://vetpetcare.in/certificate.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- USA state / city landing pages -->
   <url>
     <loc>https://vetpetcare.in/usa-california.html</loc>
