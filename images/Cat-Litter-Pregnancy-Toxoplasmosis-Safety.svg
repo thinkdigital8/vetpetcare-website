@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Cat litter box safety during pregnancy</title>
+<desc id="desc">A litter box, a scoop, and a pair of protective gloves next to a shield checkmark and a clock showing a one to five day window, representing safe litter box handling precautions during pregnancy.</desc>
+<defs>
+  <linearGradient id="bg5" x1="0" y1="0" x2="820" y2="440" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FFF8EE"/>
+    <stop offset="1" stop-color="#FFF1DC"/>
+  </linearGradient>
+  <linearGradient id="glow5" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C3AED" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="boxBody" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8B5CF6"/>
+    <stop offset="1" stop-color="#5B21B6"/>
+  </linearGradient>
+  <filter id="soft5" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#3C1361" flood-opacity=".18"/>
+  </filter>
+</defs>
+
+<rect width="820" height="440" fill="url(#bg5)"/>
+<circle cx="740" cy="70" r="220" fill="url(#glow5)"/>
+<circle cx="70" cy="390" r="200" fill="url(#glow5)"/>
+
+<!-- floor -->
+<line x1="60" y1="360" x2="760" y2="360" stroke="#ecdfce" stroke-width="2"/>
+
+<!-- litter box -->
+<g filter="url(#soft5)">
+  <rect x="120" y="230" width="270" height="120" rx="18" fill="url(#boxBody)"/>
+  <ellipse cx="255" cy="242" rx="120" ry="20" fill="#ffffff" opacity=".92"/>
+  <g fill="#5B21B6">
+    <circle cx="200" cy="242" r="4.5"/>
+    <circle cx="255" cy="242" r="4.5"/>
+    <circle cx="310" cy="242" r="4.5"/>
+  </g>
+  <!-- scoop -->
+  <g transform="translate(330,270) rotate(-18)">
+    <rect x="0" y="0" width="70" height="14" rx="7" fill="#F7941D"/>
+    <path d="M60 4 h34 a10 10 0 0 1 10 10 v10 a10 10 0 0 1 -10 10 h-34 z" fill="#F7941D"/>
+    <g fill="#C96A00" opacity=".6">
+      <rect x="66" y="8" width="4" height="14" rx="2"/>
+      <rect x="76" y="8" width="4" height="14" rx="2"/>
+      <rect x="86" y="8" width="4" height="14" rx="2"/>
+      <rect x="96" y="8" width="4" height="14" rx="2"/>
+    </g>
+  </g>
+</g>
+
+<!-- gloves -->
+<g transform="translate(150,150)" filter="url(#soft5)">
+  <rect x="0" y="10" width="60" height="80" rx="18" fill="#ffffff"/>
+  <rect x="6" y="0" width="10" height="34" rx="5" fill="#ffffff"/>
+  <rect x="20" y="-6" width="10" height="40" rx="5" fill="#ffffff"/>
+  <rect x="34" y="-4" width="10" height="38" rx="5" fill="#ffffff"/>
+  <rect x="48" y="2" width="10" height="32" rx="5" fill="#ffffff"/>
+  <text x="30" y="64" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#7C3AED">USE</text>
+  <text x="30" y="78" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#7C3AED">GLOVES</text>
+</g>
+
+<!-- shield check -->
+<g transform="translate(470,120)" filter="url(#soft5)">
+  <path d="M60 0 L118 22 V70 C118 108 92 134 60 148 C28 134 2 108 2 70 V22 Z" fill="#34B983"/>
+  <path d="M34 74 L52 92 L90 50" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+<!-- clock badge -->
+<g transform="translate(610,250)">
+  <rect x="0" y="0" width="150" height="60" rx="30" fill="#3C1361"/>
+  <text x="75" y="25" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFD9A0">SCOOP DAILY</text>
+  <text x="75" y="45" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11" fill="#F3ECFF">Lowers exposure risk</text>
+</g>
+</svg>
