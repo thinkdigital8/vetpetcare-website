@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img" aria-labelledby="ttl desc">
+<title id="ttl">How to start a cat litter distribution business</title>
+<desc id="desc">A five-step roadmap from market research and supplier selection to samples, first container and reorders, representing the path to starting a cat litter import and distribution business.</desc>
+<defs>
+  <linearGradient id="bg6" x1="0" y1="0" x2="820" y2="440" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FFF8EE"/>
+    <stop offset="1" stop-color="#FFF1DC"/>
+  </linearGradient>
+  <linearGradient id="glow6" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C3AED" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="soft6" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#3C1361" flood-opacity=".16"/>
+  </filter>
+</defs>
+
+<rect width="820" height="440" fill="url(#bg6)"/>
+<circle cx="730" cy="60" r="220" fill="url(#glow6)"/>
+<circle cx="80" cy="400" r="200" fill="url(#glow6)"/>
+
+<text x="410" y="70" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="800" fill="#3C1361">From idea to first container</text>
+<text x="410" y="98" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="14" fill="#6b5d55">5 steps to launch a cat litter distribution business</text>
+
+<!-- path line -->
+<line x1="110" y1="230" x2="710" y2="230" stroke="#ecdfce" stroke-width="6" stroke-linecap="round"/>
+<line x1="110" y1="230" x2="710" y2="230" stroke="#F7941D" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+<g filter="url(#soft6)">
+  <circle cx="110" cy="230" r="34" fill="#7C3AED"/>
+  <circle cx="260" cy="230" r="34" fill="#F7941D"/>
+  <circle cx="410" cy="230" r="34" fill="#34B983"/>
+  <circle cx="560" cy="230" r="34" fill="#5B21B6"/>
+  <circle cx="710" cy="230" r="34" fill="#C96A00"/>
+</g>
+<g font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">
+  <text x="110" y="240">1</text>
+  <text x="260" y="240">2</text>
+  <text x="410" y="240">3</text>
+  <text x="560" y="240">4</text>
+  <text x="710" y="240">5</text>
+</g>
+<g font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="700" fill="#3C1361" text-anchor="middle">
+  <text x="110" y="300">Research</text>
+  <text x="260" y="300">Choose supplier</text>
+  <text x="410" y="300">Test samples</text>
+  <text x="560" y="300">First container</text>
+  <text x="710" y="300">Reorder &amp; grow</text>
+</g>
+<g font-family="Poppins, Arial, sans-serif" font-size="11.5" fill="#6b5d55" text-anchor="middle">
+  <text x="110" y="322">Market &amp; pricing</text>
+  <text x="260" y="322">Direct manufacturer</text>
+  <text x="410" y="322">Clumping &amp; dust</text>
+  <text x="560" y="322">FOB / CIF quote</text>
+  <text x="710" y="322">Add SKUs &amp; regions</text>
+</g>
+</svg>
