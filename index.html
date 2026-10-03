@@ -355,6 +355,9 @@ nav.mainnav a:hover::after{width:100%;}
 }
 .reel-card:hover .reel-icon{transform:translate(-50%,-50%) scale(1.12);}
 .reel-card span{position:relative; color:#fff; font-weight:700; font-size:13.5px; z-index:1;}
+.clump-video{max-width:880px; margin:0 auto 44px; border-radius:20px; overflow:hidden; background:#000; box-shadow:0 22px 50px -24px rgba(60,19,97,.35);}
+.clump-video video{display:block; width:100%; height:auto;}
+.clump-video-caption{text-align:center; font-weight:600; color:var(--ink-soft); margin:16px 0 0;}
 .r1{background:linear-gradient(160deg,#8B5CF6,#4C1D95);}
 .r2{background:linear-gradient(160deg,#F7941D,#B24E00);}
 .r3{background:linear-gradient(160deg,#34B983,#0F6E4C);}
@@ -927,6 +930,10 @@ footer ul a:hover{color:var(--marigold);}
       <h2>Product-in-use, straight from real litter boxes.</h2>
       <p>A quick look at how VetPet Care performs day to day - clumping, scooping, and staying fresh.</p>
     </div>
+    <div class="clump-video">
+      <video src="videos/clumping-reel.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="VetPet Care bentonite litter forming a firm clump in a litter tray"></video>
+    </div>
+    <p class="clump-video-caption">Watch it clump: one scoop, clean tray.</p>
     <div class="reels-scroller">
       <div class=""><img src="images/vpc-unboxing-the-5-kg-bag.png" alt="VetPet Care unboxing the 5kg bag, 5kg bag front packaging" style="border-radius: 7%;"><span style="font-weight: 600;">Unboxing the 5kg bag</span></div>
       <div class=""><img src="images/vpc-one-scoop-clump-test.png" alt="VetPet Care vpc one scoop clump test" style="border-radius: 7%;"><span style="font-weight: 600;">One-scoop clump test</span></div>
