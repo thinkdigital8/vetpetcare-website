@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img" aria-labelledby="ttl desc">
+<title id="ttl">How to read a cat litter Certificate of Analysis</title>
+<desc id="desc">A clipboard with lab spec checklist lines and checkmarks, a magnifying glass over bentonite granules, representing how to read a cat litter Certificate of Analysis.</desc>
+<defs>
+  <linearGradient id="bgCOA" x1="0" y1="0" x2="820" y2="440" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FFF8EE"/>
+    <stop offset="1" stop-color="#FFF1DC"/>
+  </linearGradient>
+  <linearGradient id="glowCOA" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C3AED" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="softCOA" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#3C1361" flood-opacity=".18"/>
+  </filter>
+</defs>
+
+<rect width="820" height="440" fill="url(#bgCOA)"/>
+<circle cx="740" cy="70" r="220" fill="url(#glowCOA)"/>
+<circle cx="70" cy="390" r="200" fill="url(#glowCOA)"/>
+
+<!-- floor -->
+<line x1="60" y1="378" x2="760" y2="378" stroke="#ecdfce" stroke-width="2"/>
+
+<!-- clipboard -->
+<g filter="url(#softCOA)">
+  <rect x="160" y="110" width="260" height="300" rx="18" fill="#ffffff"/>
+  <rect x="235" y="96" width="110" height="28" rx="10" fill="#5B21B6"/>
+  <rect x="190" y="150" width="200" height="12" rx="6" fill="#ecdfce"/>
+  <rect x="190" y="150" width="120" height="12" rx="6" fill="#3C1361"/>
+
+  <g font-family="Poppins, Arial, sans-serif" font-size="13" fill="#3a2f2a">
+    <circle cx="200" cy="200" r="10" fill="#34B983"/>
+    <path d="M195 200 L199 204 L206 196" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="222" y="192" width="168" height="16" rx="4" fill="#fdf2e3"/>
+
+    <circle cx="200" cy="236" r="10" fill="#34B983"/>
+    <path d="M195 236 L199 240 L206 232" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="222" y="228" width="168" height="16" rx="4" fill="#fdf2e3"/>
+
+    <circle cx="200" cy="272" r="10" fill="#34B983"/>
+    <path d="M195 272 L199 276 L206 268" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="222" y="264" width="168" height="16" rx="4" fill="#fdf2e3"/>
+
+    <circle cx="200" cy="308" r="10" fill="#34B983"/>
+    <path d="M195 308 L199 312 L206 304" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="222" y="300" width="168" height="16" rx="4" fill="#fdf2e3"/>
+
+    <circle cx="200" cy="344" r="10" fill="#34B983"/>
+    <path d="M195 344 L199 348 L206 340" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="222" y="336" width="130" height="16" rx="4" fill="#fdf2e3"/>
+  </g>
+</g>
+
+<!-- magnifying glass over granules -->
+<g transform="translate(470,210)" filter="url(#softCOA)">
+  <circle cx="60" cy="60" r="58" fill="#FFF8EE" stroke="#3C1361" stroke-width="10"/>
+  <g fill="#C9BBA8">
+    <circle cx="35" cy="45" r="7"/>
+    <circle cx="60" cy="35" r="7"/>
+    <circle cx="85" cy="48" r="7"/>
+    <circle cx="42" cy="68" r="7"/>
+    <circle cx="68" cy="75" r="7"/>
+    <circle cx="90" cy="70" r="7"/>
+    <circle cx="55" cy="90" r="7"/>
+  </g>
+  <line x1="102" y1="102" x2="140" y2="140" stroke="#3C1361" stroke-width="12" stroke-linecap="round"/>
+</g>
+
+<!-- lab-tested badge -->
+<g transform="translate(540,70)">
+  <rect x="0" y="0" width="150" height="56" rx="28" fill="#F7941D"/>
+  <text x="75" y="35" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#2A1200">LAB TESTED</text>
+</g>
+</svg>
